@@ -1,38 +1,189 @@
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Navbar {
+  height: 50px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid rgba(167, 165, 165, 0.5);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log {
+  width: 20%;
+}
+
+.log img {
+  height: 30px;
+  width: 100%;
+}
+
+.Navbarsearch {
+  flex-grow: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Navbarsearch input {
+  width: 400px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-dropdown {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-dropdown img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+}
+
+.dropdown-content ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ffffff;
+  background-color: #f9f9f9;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.dropdown-content li:hover {
+  background-color: rgb(9, 196, 243);
+  color: #ffffff;
+}
+
+.dropdown-content li:hover.logout-item {
+  background-color: red;
+}
+
+.dropdown-content li {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content li:nth-child(2) {
+  white-space: nowrap;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.Content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.Sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.Sidebar .lib {
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+  left: 21px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-left: 10px;
+}
+
+.SidebarList .row {
+  width: 80%;
+  height: 50%;
+  list-style-type: none;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: row;
+  color: rgb(9, 196, 243);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #4287F5;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.SidebarList #active {
+  background-color: #4287F5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  padding: 12px;
+  margin-right: 20px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card .content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.card .content p {
+  margin-bottom: 0;
+  color: #333333;
 }
