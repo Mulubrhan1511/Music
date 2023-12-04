@@ -1,7 +1,7 @@
 
 import './App.css';
-import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import React,{createContext, useContext,useEffect,useReducer} from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
 import Sidebar from './components/Sidebar';
 import Home from './components/screen/Home';
 import Edit from './components/screen/Edit';

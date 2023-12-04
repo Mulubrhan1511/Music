@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import '../App.css';
-import { SidebarData, Playlist } from './SidebarData';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import { SidebarData } from './SidebarData';
+
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import AlbumIcon from '@mui/icons-material/Album';
 import MicIcon from '@mui/icons-material/Mic';
 function Sidebar() {
-  const [songs, setSongs] = useState([]);
+ 
   const [playlists, setPlaylists] = useState([])
   useEffect(() => {
     fetchSongs();
@@ -32,7 +32,7 @@ function Sidebar() {
       <ul >
             {SidebarData.map((val,key)=> {
                 return (<li key={key} className='row'
-                id= {window.location.pathname == val.link ? "active": ""}
+                id= {window.location.pathname === val.link ? "active": ""}
                 onClick={()=>{
                     window.location.pathname = val.link;
                 }}
@@ -54,7 +54,7 @@ function Sidebar() {
       <div className='SidebarList'>
       <ul >
       <li  className='row'
-                id= {window.location.pathname == "/album" ? "active": ""}
+                id= {window.location.pathname === "/album" ? "active": ""}
                 onClick={()=>{
                   window.location.pathname ="/";
               }}
@@ -72,7 +72,7 @@ function Sidebar() {
             
         </li>
             <li  className='row'
-                 id= {window.location.pathname == "/artist" ? "active": ""}
+                 id= {window.location.pathname === "/artist" ? "active": ""}
                  onClick={()=>{
                    window.location.pathname ="/artist";
                }}
@@ -91,7 +91,7 @@ function Sidebar() {
             
         </li>
         <li  className='row'
-                id= {window.location.pathname == "/album" ? "active": ""}
+                id= {window.location.pathname === "/album" ? "active": ""}
                 onClick={()=>{
                   window.location.pathname ="/album";
               }}
@@ -108,7 +108,7 @@ function Sidebar() {
             
         </li>
         <li  className='row'
-                 id= {window.location.pathname == "/genre" ? "active": ""}
+                 id= {window.location.pathname === "/genre" ? "active": ""}
                  onClick={()=>{
                    window.location.pathname ="/genre";
                }}

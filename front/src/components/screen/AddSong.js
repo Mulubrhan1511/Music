@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import React, {  useState } from "react";
+
 function AddSong() {
     const [title, setTitle] = useState("");
     const [artist, setArtist] = useState("");
     const [album, setAlbum] = useState("");
     const [genre, setGenre] = useState("");
-    const navigate = useNavigate();
+   
     function addSong() {
         fetch("/songs", {
           method: "POST",
