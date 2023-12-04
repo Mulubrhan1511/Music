@@ -1,11 +1,10 @@
 import React from 'react'
 import HomeIcon from '@mui/icons-material/Home';
-import MailIcon from '@mui/icons-material/Mail';
-import AssessmentIcon from '@mui/icons-material/Assessment';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import GroupIcon from '@mui/icons-material/Group';
-import PermMediaIcon from '@mui/icons-material/PermMedia';
 
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import MusicNoteIcon from '@mui/icons-material/MusicNote';
+import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
+import AlbumIcon from '@mui/icons-material/Album';
 
 
 
@@ -13,18 +12,40 @@ export const SidebarData = [
     {
         title: "Home",
         icon: <HomeIcon />,
-        link:"/home"
+        link:"/"
+    },
+    {
+        title: "Add Song",
+        icon: <MusicNoteIcon />,
+        link:"/addsong"
     },
     {
         title: "About",
         icon: <DashboardIcon />,
         link:"/about"
     },
+    
+   
+   
+
+]
+export const Playlist = [
     {
-        title: "Search",
-        icon: <MailIcon />,
-        link:"/search"
-    }
+        title: "Artist",
+        icon: <MusicNoteIcon />,
+        link:"/artist"
+    },
+    {
+        title: "Album",
+        icon: <AlbumIcon />,
+        link:"/album"
+    },
+    {
+        title: "Genre",
+        icon: <TheaterComedyIcon />,
+        link:"/gener"
+    },
+    
    
    
 

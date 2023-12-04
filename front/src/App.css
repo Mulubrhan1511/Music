@@ -5,91 +5,9 @@
   flex-direction: column;
 }
 
-.Navbar {
-  height: 50px;
-  width: 100%;
-  background-color: #ffffff;
-  border: 1px solid rgba(167, 165, 165, 0.5);
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.log {
-  width: 20%;
-}
 
-.log img {
-  height: 30px;
-  width: 100%;
-}
 
-.Navbarsearch {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.Navbarsearch input {
-  width: 400px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.profile-dropdown {
-  position: relative;
-}
-
-.profile-dropdown img {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-}
-
-.dropdown-content {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  display: none;
-}
-
-.dropdown-content ul {
-  list-style-type: none;
-  padding: 0;
-  border: 1px solid #ffffff;
-  background-color: #f9f9f9;
-  width: 150px;
-  border-radius: 5px;
-}
-
-.dropdown-content li:hover {
-  background-color: rgb(9, 196, 243);
-  color: #ffffff;
-}
-
-.dropdown-content li:hover.logout-item {
-  background-color: red;
-}
-
-.dropdown-content li {
-  padding: 5px;
-  border-bottom: 1px solid #ccc;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.dropdown-content li:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content li:nth-child(2) {
-  white-space: nowrap;
-}
-
-.profile-dropdown:hover .dropdown-content {
-  display: block;
-}
 
 .Content {
   display: flex;
@@ -156,45 +74,32 @@
 
 .main-content {
   flex-grow: 1;
-  padding-left: 10px;
-}
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  padding-left: 30px;
+  padding-top: 30px;
 }
 
-.card {
-  flex-basis: calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
-  padding: 12px;
-  margin-bottom: 20px;
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 10px 20px; /* Decrease the padding */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px; /* Decrease the font size */
+  
+}
+.button.delete{
+  background-color: #f10202;
 }
 
-.card .content img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px;
-}
-
-.card .content p {
-  margin-bottom: 0;
-  color: #333333;
-}
-
-@media (max-width: 992px) {
-  .card {
-    flex-basis: calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
