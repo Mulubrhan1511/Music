@@ -54,7 +54,7 @@ function Sidebar() {
       <div className='SidebarList'>
       <ul >
       <li  className='row'
-                id= {window.location.pathname === "/album" ? "active": ""}
+                id= {window.location.pathname === "/song" ? "active": ""}
                 onClick={()=>{
                   window.location.pathname ="/";
               }}
