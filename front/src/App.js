@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import Sidebar from './components/Sidebar';
 import Home from './components/screen/Home';
+import Song from './components/screen/Song';
 import Edit from './components/screen/Edit';
 import AddSong from './components/screen/AddSong';
 import Album from './components/screen/Album';
@@ -23,6 +24,7 @@ function App() {
      <div>
     <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/song" element={<Song />} />
           <Route exact path="/addsong" element={<AddSong />} />
           <Route exact path="/genre" element={<Genre />} />
           <Route exact path="/album" element={<Album />} />
